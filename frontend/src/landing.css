@@ -1,0 +1,54 @@
+.Landing {
+  text-align: center;
+}
+
+.Landing-logo {
+  height: 40vmin;
+}
+
+.Landing-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Landing-link {
+  color: #09d3ac;
+}
+
+
+.header-buttons{
+  background-color: #282c34;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Text Me One', sans-serif;
+}
+
+.predict-signout {
+  background-color: #282c34;
+  width: 40%;
+  float: left;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.predict-next {
+  background-color: #282c34;
+  width: 40%;
+  float: right;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
