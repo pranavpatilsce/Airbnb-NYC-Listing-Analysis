@@ -1,11 +1,29 @@
 .Topbar {
   text-align: center;
-  background-color: #282c34;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
 }
 
-.Topbar-logo {
-  height: 15vmin;
-  background-color: #282c34;
+.TopBar-logo {
+  //height: 15vmin;
+  background-color: white;
+  width: 35%;
+  float: left;
+  padding-top: 81px;
+  padding-left: 200px;
+}
+
+.TopBar-Title{
+  font-family: 'Questrial', sans-serif;
+  width: 50%;
+  float: left;
+  font-size: 79px;
+  color: #FF5a5F;
+  transform: scale(0.95, 1);
+  font-weight: 900;
+  padding-top: 91px;
 }
 
 .Topbar-header {
@@ -17,8 +35,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.Topbar-link {
-  color: #09d3ac;
 }

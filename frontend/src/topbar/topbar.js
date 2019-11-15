@@ -4,23 +4,12 @@ import './topbar.css';
 
 function Topbar() {
   return (
-    <div className="Topbar">
+    <div >
       <header>
-        <div>
-            <div>
-                <a
-                  href="/"
-                  //target="_blank"
-                  rel="noopener noreferrer"
-                >
-                <img src={logo} className="Topbar-logo" alt="logo" />
-                </a>
+            <div className="Topbar">
+                <a href="/" rel="noopener noreferrer"> <img src={logo} className="TopBar-logo"/></a>
+                <h4 className="TopBar-Title">NYC price prediction</h4>
             </div>
-            <div>
-
-            </div>
-        </div>
-
       </header>
     </div>
   );

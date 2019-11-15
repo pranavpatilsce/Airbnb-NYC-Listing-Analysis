@@ -4,6 +4,7 @@ import './index.css';
 import Landing from './landing.js';
 import Results from './results/results.js';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
