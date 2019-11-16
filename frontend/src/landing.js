@@ -375,7 +375,7 @@ class Login extends React.Component {
               {this.state.isSignedIn ?
               (
               <div>
-                <HostForm/>
+                <HostForm }/>
                 <a href='/results'><Button className="Predict-Button" color="success" >Predict my Airbnb's price!</Button></a>
                 <div className="header-buttons">
                     <div>

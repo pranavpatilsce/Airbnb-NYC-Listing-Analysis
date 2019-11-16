@@ -9,21 +9,21 @@
 .TopBar-logo {
   //height: 15vmin;
   background-color: white;
-  width: 35%;
+  width: 33%;
   float: left;
-  padding-top: 81px;
-  padding-left: 200px;
+  padding-top: 80px;
+  padding-left: 85px;
 }
 
 .TopBar-Title{
   font-family: 'Questrial', sans-serif;
-  width: 50%;
+  width: 65%;
   float: left;
-  font-size: 79px;
+  font-size: 80px;
   color: #FF5a5F;
-  transform: scale(0.95, 1);
-  font-weight: 900;
-  padding-top: 91px;
+  transform: scale(1.08, 1);
+  font-weight:700;
+  padding-top: 92px;
 }
 
 .Topbar-header {
