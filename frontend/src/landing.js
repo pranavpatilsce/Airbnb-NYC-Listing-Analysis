@@ -294,53 +294,52 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Amenities</Label>
-        <Input type="select" name="select" id="exampleSelect" multiple>
-          <option>TV</option>
-          <option>Cable TV</option>
-          <option>Wifi/Internet</option>
-          <option>Air Conditioning</option>
-          <option>Heating</option>
-          <option>Gym</option>
-          <option>Pets allowed</option>
-          <option>Kitchen</option>
-          <option>Washer</option>
-          <option>Dryer</option>
-          <option>Iron</option>
+        <Input type="select" name="select" id="amenities_select" multiple>
+            <option>Self check-in</option>
+            <option>Cooking basics</option>
+            <option>Cable TV</option>
+            <option>Oven</option>
+            <option>Microwave</option>
+            <option>Dishes and silverware</option>
+            <option>Bed linens</option>
+            <option>Elevator</option>
+            <option>Family/kid friendly</option>
+            <option>Refrigerator</option>
+            <option>Internet</option>
+            <option>Free street parking</option>
+            <option>First aid kit</option>
+            <option>Lock on bedroom door</option>
+            <option>Fire extinguisher</option>
+            <option>Dryer</option>
+            <option>Washer</option>
+            <option>Hot water</option>
+            <option>Iron</option>
+            <option>Laptop friendly workspace</option>
+            <option>Hair dryer</option>
+            <option>TV</option>
+            <option>Shampoo</option>
+            <option>Carbon monoxide detector</option>
+            <option>Hangers</option>
+            <option>Air Conditioning</option>
+            <option>Smoke detector</option>
+            <option>Kitchen</option>
+            <option>Heating</option>
+            <option>Wifi</option>
         </Input>
       </FormGroup>
       <FormGroup>
-        <Label for="exampleAddress">Address</Label>
-        <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
+        <Label for="exampleSelect">Bed type</Label>
+        <Input type="select" id="bed_type">
+          <option>Airbed</option>
+          <option>Couch</option>
+          <option>Real Bed</option>
+          <option>Futon</option>
+          <option>Pull-out Sofa</option>
+        </Input>
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleAddress2">Address 2</Label>
-        <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
-      </FormGroup>
-      <Row form>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="exampleCity">City</Label>
-            <Input type="text" name="city" id="exampleCity"/>
-          </FormGroup>
-        </Col>
-        <Col md={4}>
-          <FormGroup>
-            <Label for="exampleState">State</Label>
-            <Input type="text" name="state" id="exampleState"/>
-          </FormGroup>
-        </Col>
-        <Col md={2}>
-          <FormGroup>
-            <Label for="exampleZip">Zip</Label>
-            <Input type="text" name="zip" id="exampleZip"/>
-          </FormGroup>
-        </Col>
-      </Row>
       <FormGroup check>
-        <Input type="checkbox" name="check" id="exampleCheck"/>
-        <Label for="exampleCheck" check>Check me out</Label>
+        <Label className="lead">The prediction may take upto 5 mins.</Label>
       </FormGroup>
-      <Button>Sign in</Button>
     </Form>
   );
 }
@@ -376,22 +375,21 @@ class Login extends React.Component {
               {this.state.isSignedIn ?
               (
               <div>
-
-                <HostForm />
-
+                <HostForm/>
+                <a href='/results'><Button className="Predict-Button" color="success" >Predict my Airbnb's price!</Button></a>
                 <div className="header-buttons">
                     <div>
                       <h1 className="display-4">Welcome {firebase.auth().currentUser.displayName}</h1>
-                      <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+                      <img alt="profile picture" top width="30%" src={firebase.auth().currentUser.photoURL} />
                     </div>
 
                     <div className="predict-signout">
                       <Button onClick={() => firebase.auth().signOut()}>Sign out!</Button>
                     </div>
 
-                    <div className="predict-next">
-                      <a href='/results'><Button> Predict! </Button></a>
-                    </div>
+                    {/*<div className="predict-next">
+                      <Button> Predict! </Button>>
+                    </div>*/}
                 </div>
               </div>
               )

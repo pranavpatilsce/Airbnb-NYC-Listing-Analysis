@@ -1,5 +1,6 @@
 .Landing {
   text-align: center;
+  overflow: scroll;
 }
 
 .Landing-logo {
@@ -14,13 +15,18 @@
   align-items: center;
   justify-content: flex-start;
   //font-size: calc(10px + 2vmin);
-  color: black;
+  //color: black;
 }
 
 .Landing-Title{
   font-family: 'Questrial', sans-serif;
 }
 
+.Predict-Button{
+  font-family: 'Questrial', sans-serif;
+  opacity: 0.79;
+  padding: 5%;
+}
 
 .LogInConsole{
   padding-top: 8%;
@@ -40,8 +46,6 @@
 
 .predict-signout {
   //background-color: #282c34;
-  width: 40%;
-  float: left;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
