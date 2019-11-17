@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState, Component} from 'react';
 import logo from './svg/airbnblogo.png';
 import './landing.css';
 import TopBar from './topbar/topbar.js';
@@ -15,6 +15,19 @@ firebase.initializeApp({
 
 const HostForm = (props) => {
 
+  const [neighborhood, setNeighborhood] = useState('');
+  const [city, setCity] = useState('');
+  const [superhost, setSuperhost] = useState('');
+  const [photoIsThere, setPhotoIsThere] = useState('');
+  const [verified, setVerified] = useState('');
+  const [roomType, setRoomType] = useState('');
+  {/*const [amenitiesOne, amenitiesTwo, amenitiesThree, setAmenitiesOne, setAmenitiesTwo, setAmenitiesThree] = useState([{amenity: '', }]);*/}
+  const [amenitiesOne, setAmenitiesOne] = useState('');
+  const [amenitiesTwo, setAmenitiesTwo] = useState('');
+  const [amenitiesThree, setAmenitiesThree] = useState('');
+
+  const [bedType, setBedType] = useState('');
+
   return (
     <Form>
        <FormGroup check>
@@ -25,7 +38,8 @@ const HostForm = (props) => {
        </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Area</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>
+          <option></option>
           <option>Allerton</option>
           <option>Arden Heights</option>
           <option>Arrochar</option>
@@ -254,7 +268,8 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">City</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={city} onChange={e => setCity(e.target.value)}>
+          <option></option>
           <option>Bronx</option>
           <option>Brooklyn</option>
           <option>Manhattan</option>
@@ -264,28 +279,32 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Are you an Airbnb superhost?</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={superhost} onChange={e => setSuperhost(e.target.value)}>
+          <option></option>
           <option>Yes</option>
           <option>No</option>
         </Input>
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Are you clearly visible in your Airbnb profile photo?</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={photoIsThere} onChange={e => setPhotoIsThere(e.target.value)}>
+          <option></option>
           <option>Yes</option>
           <option>No</option>
         </Input>
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Is your host identity verified with Airbnb?</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={verified} onChange={e => setVerified(e.target.value)}>
+          <option></option>
           <option>Yes</option>
           <option>No</option>
         </Input>
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">How would you describe the room/accommodation in this listing?</Label>
-        <Input type="select" name="select" id="exampleSelect">
+        <Input type="select" value={roomType} onChange={e => setRoomType(e.target.value)}>
+          <option></option>
           <option>Entire Home/Apartment</option>
           <option>Hotel Room</option>
           <option>Private Room</option>
@@ -294,7 +313,78 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Amenities</Label>
-        <Input type="select" name="select" id="amenities_select" multiple>
+        <Input type="select" value={amenitiesOne} onChange={e => setAmenitiesOne(e.target.value)}>
+            <option></option>
+            <option>Self check-in</option>
+            <option>Cooking basics</option>
+            <option>Cable TV</option>
+            <option>Oven</option>
+            <option>Microwave</option>
+            <option>Dishes and silverware</option>
+            <option>Bed linens</option>
+            <option>Elevator</option>
+            <option>Family/kid friendly</option>
+            <option>Refrigerator</option>
+            <option>Internet</option>
+            <option>Free street parking</option>
+            <option>First aid kit</option>
+            <option>Lock on bedroom door</option>
+            <option>Fire extinguisher</option>
+            <option>Dryer</option>
+            <option>Washer</option>
+            <option>Hot water</option>
+            <option>Iron</option>
+            <option>Laptop friendly workspace</option>
+            <option>Hair dryer</option>
+            <option>TV</option>
+            <option>Shampoo</option>
+            <option>Carbon monoxide detector</option>
+            <option>Hangers</option>
+            <option>Air Conditioning</option>
+            <option>Smoke detector</option>
+            <option>Kitchen</option>
+            <option>Heating</option>
+            <option>Wifi</option>
+        </Input>
+      </FormGroup>
+      <FormGroup>
+        <Input type="select" value={amenitiesTwo} onChange={e => setAmenitiesTwo(e.target.value)}>
+            <option></option>
+            <option>Self check-in</option>
+            <option>Cooking basics</option>
+            <option>Cable TV</option>
+            <option>Oven</option>
+            <option>Microwave</option>
+            <option>Dishes and silverware</option>
+            <option>Bed linens</option>
+            <option>Elevator</option>
+            <option>Family/kid friendly</option>
+            <option>Refrigerator</option>
+            <option>Internet</option>
+            <option>Free street parking</option>
+            <option>First aid kit</option>
+            <option>Lock on bedroom door</option>
+            <option>Fire extinguisher</option>
+            <option>Dryer</option>
+            <option>Washer</option>
+            <option>Hot water</option>
+            <option>Iron</option>
+            <option>Laptop friendly workspace</option>
+            <option>Hair dryer</option>
+            <option>TV</option>
+            <option>Shampoo</option>
+            <option>Carbon monoxide detector</option>
+            <option>Hangers</option>
+            <option>Air Conditioning</option>
+            <option>Smoke detector</option>
+            <option>Kitchen</option>
+            <option>Heating</option>
+            <option>Wifi</option>
+        </Input>
+      </FormGroup>
+      <FormGroup>
+        <Input type="select" value={amenitiesThree} onChange={e => setAmenitiesThree(e.target.value)}>
+            <option></option>
             <option>Self check-in</option>
             <option>Cooking basics</option>
             <option>Cable TV</option>
@@ -329,7 +419,8 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Bed type</Label>
-        <Input type="select" id="bed_type">
+        <Input type="select" value={bedType} onChange={e => setBedType(e.target.value)}>
+          <option></option>
           <option>Airbed</option>
           <option>Couch</option>
           <option>Real Bed</option>
@@ -340,6 +431,31 @@ const HostForm = (props) => {
       <FormGroup check>
         <Label className="lead">The prediction may take upto 5 mins.</Label>
       </FormGroup>
+
+      <Button color="success" className="Predict-Button" type="submit" onClick={async ()  => {
+        const sending = {
+          neighborhood,
+          city,
+          superhost,
+          photoIsThere,
+          verified,
+          roomType,
+          amenitiesOne,
+          amenitiesTwo,
+          amenitiesThree,
+        };
+        const response = await fetch('/results', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify(sending)
+        })
+        if(response.ok){
+          console.log("worked");
+        }
+      }}
+      >Predict my Airbnb's price!</Button>
     </Form>
   );
 }
@@ -375,8 +491,8 @@ class Login extends React.Component {
               {this.state.isSignedIn ?
               (
               <div>
-                <HostForm }/>
-                <a href='/results'><Button className="Predict-Button" color="success" >Predict my Airbnb's price!</Button></a>
+                <HostForm />
+                {/*<a href='/results'><Button className="Predict-Button" color="success" ></Button></a>*/}
                 <div className="header-buttons">
                     <div>
                       <h1 className="display-4">Welcome {firebase.auth().currentUser.displayName}</h1>
@@ -414,7 +530,6 @@ class Login extends React.Component {
       </div>
     )
   }
-
 }
 
 function Landing() {

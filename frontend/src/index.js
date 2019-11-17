@@ -14,7 +14,7 @@ class PredictionRoutes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/results" component={Results} />
+          {/*<Route exact path="/results" component={Results} />*/}
         </Switch>
       </Router>
     )
