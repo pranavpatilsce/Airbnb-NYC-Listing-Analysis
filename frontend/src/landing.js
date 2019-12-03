@@ -37,31 +37,31 @@ const HostForm = (props) => {
        </FormGroup>*/}
        <FormGroup>
          <Label for="exampleSelect">Are you an Airbnb superhost?</Label>
-         <Input required type="select" value={superhost} onChange={e => setSuperhost(e.target.value)}>
+         <Input type="select" value={superhost} onChange={e => setSuperhost(e.target.value)}>
            <option></option>
-           <option>t</option>
-           <option>f</option>
+           <option value="1">Yes</option>
+           <option value="0">No</option>
          </Input>
        </FormGroup>
        <FormGroup>
          <Label for="exampleSelect">Are you clearly visible in your Airbnb profile photo?</Label>
-         <Input required type="select" value={photoIsThere} onChange={e => setPhotoIsThere(e.target.value)}>
-           <option></option>
-           <option>t</option>
-           <option>f</option>
+         <Input type="select" value={photoIsThere} onChange={e => setPhotoIsThere(e.target.value)}>
+            <option></option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
          </Input>
        </FormGroup>
        <FormGroup>
          <Label for="exampleSelect">Is your host identity verified with Airbnb?</Label>
-         <Input required type="select" value={verified} onChange={e => setVerified(e.target.value)}>
-           <option></option>
-           <option>t</option>
-           <option>f</option>
+         <Input type="select" value={verified} onChange={e => setVerified(e.target.value)}>
+            <option></option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
          </Input>
        </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Area</Label>
-        <Input required type="select" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>
+        <Input type="select" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>
           <option></option>
           <option>Allerton</option>
           <option>Arden Heights</option>
@@ -291,29 +291,29 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Bathrooms</Label>
-        <Input required type="select" value={bathrooms} onChange={e => setBathrooms(e.target.value)}>
-          <option></option>
+        <Input type="select" value={bathrooms} onChange={e => setBathrooms(e.target.value)}>
+          <option value = '0'></option>
           <option>0</option>
-          <option>0.5</option>
+          <option value='1'>0.5</option>
           <option>1</option>
-          <option>1.5</option>
+          <option value='2'>1.5</option>
           <option>2</option>
-          <option>2.5</option>
+          <option value="3">2.5</option>
           <option>3</option>
-          <option>3.5</option>
+          <option value="4">3.5</option>
           <option>4.0</option>
-          <option>4.5</option>
+          <option value="5">4.5</option>
           <option>5.0</option>
-          <option>5.5</option>
+          <option value="6">5.5</option>
           <option>6.0</option>
-          <option>6.5</option>
+          <option value="7">6.5</option>
           <option>7</option>
-          <option>15.5</option>
+          <option value="7">15.5</option>
         </Input>
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Bed type</Label>
-        <Input required type="select" value={bedType} onChange={e => setBedType(e.target.value)}>
+        <Input type="select" value={bedType} onChange={e => setBedType(e.target.value)}>
           <option></option>
           <option>Airbed</option>
           <option>Couch</option>
@@ -324,7 +324,7 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">How many guests allowed?</Label>
-        <Input required type="select" value={guests} onChange={e => setGuests(e.target.value)}>
+        <Input type="select" value={guests} onChange={e => setGuests(e.target.value)}>
           <option></option>
           <option>1</option>
           <option>2</option>
@@ -346,7 +346,7 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">How would you describe the room/accommodation in this listing?</Label>
-        <Input required type="select" value={roomType} onChange={e => setRoomType(e.target.value)}>
+        <Input type="select" value={roomType} onChange={e => setRoomType(e.target.value)}>
           <option></option>
           <option>Entire home/apt</option>
           <option>Hotel room</option>
@@ -356,10 +356,10 @@ const HostForm = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Instanly bookable?</Label>
-        <Input required type="select" value={bookable} onChange={e => setBookable(e.target.value)}>
+        <Input type="select" value={bookable} onChange={e => setBookable(e.target.value)}>
           <option></option>
-          <option>t</option>
-          <option>f</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
         </Input>
       </FormGroup>
       {/*

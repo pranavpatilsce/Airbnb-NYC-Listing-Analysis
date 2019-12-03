@@ -1,11 +1,11 @@
 {
-    "superhost": "f",
-    "photoIsThere": "t",
-    "verified": "f",
-    "neighborhood": "Arrochar",
-    "bathrooms": "2.5",
-    "bedType": "Couch",
+    "superhost": "1",
+    "photoIsThere": "1",
+    "verified": "0",
+    "neighborhood": "Allerton",
+    "bathrooms": "1",
+    "bedType": "Real Bed",
     "guests": "3",
-    "roomType": "Hotel room",
-    "bookable": "t"
+    "roomType": "Entire home/apt",
+    "bookable": "1"
 }
