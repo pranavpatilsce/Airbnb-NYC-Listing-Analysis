@@ -15,30 +15,53 @@ firebase.initializeApp({
 
 const HostForm = (props) => {
 
-  const [neighborhood, setNeighborhood] = useState('');
-  const [city, setCity] = useState('');
   const [superhost, setSuperhost] = useState('');
   const [photoIsThere, setPhotoIsThere] = useState('');
   const [verified, setVerified] = useState('');
-  const [roomType, setRoomType] = useState('');
-  {/*const [amenitiesOne, amenitiesTwo, amenitiesThree, setAmenitiesOne, setAmenitiesTwo, setAmenitiesThree] = useState([{amenity: '', }]);*/}
-  const [amenitiesOne, setAmenitiesOne] = useState('');
-  const [amenitiesTwo, setAmenitiesTwo] = useState('');
-  const [amenitiesThree, setAmenitiesThree] = useState('');
-
+  const [neighborhood, setNeighborhood] = useState('');
+  const [bathrooms, setBathrooms] = useState('');
   const [bedType, setBedType] = useState('');
+  const [guests, setGuests] = useState('');
+  const [roomType, setRoomType] = useState('');
+  const [bookable, setBookable] = useState('');
+  {/*const [amenitiesOne, amenitiesTwo, amenitiesThree, setAmenitiesOne, setAmenitiesTwo, setAmenitiesThree] = useState([{amenity: '', }]);*/}
 
   return (
     <Form>
+        {/*
        <FormGroup check>
          <Label check>
            <Input type="checkbox" />{' '}
            This listing will offer access to a restroom.
          </Label>
+       </FormGroup>*/}
+       <FormGroup>
+         <Label for="exampleSelect">Are you an Airbnb superhost?</Label>
+         <Input required type="select" value={superhost} onChange={e => setSuperhost(e.target.value)}>
+           <option></option>
+           <option>t</option>
+           <option>f</option>
+         </Input>
+       </FormGroup>
+       <FormGroup>
+         <Label for="exampleSelect">Are you clearly visible in your Airbnb profile photo?</Label>
+         <Input required type="select" value={photoIsThere} onChange={e => setPhotoIsThere(e.target.value)}>
+           <option></option>
+           <option>t</option>
+           <option>f</option>
+         </Input>
+       </FormGroup>
+       <FormGroup>
+         <Label for="exampleSelect">Is your host identity verified with Airbnb?</Label>
+         <Input required type="select" value={verified} onChange={e => setVerified(e.target.value)}>
+           <option></option>
+           <option>t</option>
+           <option>f</option>
+         </Input>
        </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Area</Label>
-        <Input type="select" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>
+        <Input required type="select" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>
           <option></option>
           <option>Allerton</option>
           <option>Arden Heights</option>
@@ -267,50 +290,79 @@ const HostForm = (props) => {
         </Input>
       </FormGroup>
       <FormGroup>
-        <Label for="exampleSelect">City</Label>
-        <Input type="select" value={city} onChange={e => setCity(e.target.value)}>
+        <Label for="exampleSelect">Bathrooms</Label>
+        <Input required type="select" value={bathrooms} onChange={e => setBathrooms(e.target.value)}>
           <option></option>
-          <option>Bronx</option>
-          <option>Brooklyn</option>
-          <option>Manhattan</option>
-          <option>Queens</option>
-          <option>Staten Island</option>
+          <option>0</option>
+          <option>0.5</option>
+          <option>1</option>
+          <option>1.5</option>
+          <option>2</option>
+          <option>2.5</option>
+          <option>3</option>
+          <option>3.5</option>
+          <option>4.0</option>
+          <option>4.5</option>
+          <option>5.0</option>
+          <option>5.5</option>
+          <option>6.0</option>
+          <option>6.5</option>
+          <option>7</option>
+          <option>15.5</option>
         </Input>
       </FormGroup>
       <FormGroup>
-        <Label for="exampleSelect">Are you an Airbnb superhost?</Label>
-        <Input type="select" value={superhost} onChange={e => setSuperhost(e.target.value)}>
+        <Label for="exampleSelect">Bed type</Label>
+        <Input required type="select" value={bedType} onChange={e => setBedType(e.target.value)}>
           <option></option>
-          <option>Yes</option>
-          <option>No</option>
+          <option>Airbed</option>
+          <option>Couch</option>
+          <option>Real Bed</option>
+          <option>Futon</option>
+          <option>Pull-out Sofa</option>
         </Input>
       </FormGroup>
       <FormGroup>
-        <Label for="exampleSelect">Are you clearly visible in your Airbnb profile photo?</Label>
-        <Input type="select" value={photoIsThere} onChange={e => setPhotoIsThere(e.target.value)}>
+        <Label for="exampleSelect">How many guests allowed?</Label>
+        <Input required type="select" value={guests} onChange={e => setGuests(e.target.value)}>
           <option></option>
-          <option>Yes</option>
-          <option>No</option>
-        </Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleSelect">Is your host identity verified with Airbnb?</Label>
-        <Input type="select" value={verified} onChange={e => setVerified(e.target.value)}>
-          <option></option>
-          <option>Yes</option>
-          <option>No</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
         </Input>
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">How would you describe the room/accommodation in this listing?</Label>
-        <Input type="select" value={roomType} onChange={e => setRoomType(e.target.value)}>
+        <Input required type="select" value={roomType} onChange={e => setRoomType(e.target.value)}>
           <option></option>
-          <option>Entire Home/Apartment</option>
-          <option>Hotel Room</option>
-          <option>Private Room</option>
-          <option>Shared Room</option>
+          <option>Entire home/apt</option>
+          <option>Hotel room</option>
+          <option>Private room</option>
+          <option>Shared room</option>
         </Input>
       </FormGroup>
+      <FormGroup>
+        <Label for="exampleSelect">Instanly bookable?</Label>
+        <Input required type="select" value={bookable} onChange={e => setBookable(e.target.value)}>
+          <option></option>
+          <option>t</option>
+          <option>f</option>
+        </Input>
+      </FormGroup>
+      {/*
       <FormGroup>
         <Label for="exampleSelect">Amenities</Label>
         <Input type="select" value={amenitiesOne} onChange={e => setAmenitiesOne(e.target.value)}>
@@ -417,32 +469,23 @@ const HostForm = (props) => {
             <option>Wifi</option>
         </Input>
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleSelect">Bed type</Label>
-        <Input type="select" value={bedType} onChange={e => setBedType(e.target.value)}>
-          <option></option>
-          <option>Airbed</option>
-          <option>Couch</option>
-          <option>Real Bed</option>
-          <option>Futon</option>
-          <option>Pull-out Sofa</option>
-        </Input>
-      </FormGroup>
+      */}
+
       <FormGroup check>
         <Label className="lead">The prediction may take upto 5 mins.</Label>
       </FormGroup>
 
       <Button color="success" className="Predict-Button" type="submit" onClick={async ()  => {
         const sending = {
-          neighborhood,
-          city,
           superhost,
           photoIsThere,
           verified,
+          neighborhood,
+          bathrooms,
+          bedType,
+          guests,
           roomType,
-          amenitiesOne,
-          amenitiesTwo,
-          amenitiesThree,
+          bookable,
         };
         const response = await fetch('/results', {
           method: 'POST',

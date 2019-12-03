@@ -1,13 +1,11 @@
 {
-    "neighborhood": "",
-    "city": "",
-    "superhost": "",
-    "photoIsThere": "",
-    "verified": "",
-    "roomType": "",
-    "amenitiesOne": [
-        "Oven"
-    ],
-    "amenitiesTwo": "Bed linens",
-    "amenitiesThree": "Fire extinguisher"
+    "superhost": "f",
+    "photoIsThere": "t",
+    "verified": "f",
+    "neighborhood": "Arrochar",
+    "bathrooms": "2.5",
+    "bedType": "Couch",
+    "guests": "3",
+    "roomType": "Hotel room",
+    "bookable": "t"
 }
